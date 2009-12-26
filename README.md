@@ -1,0 +1,1 @@
+WTFramework Bookmarklet – check the JavaScript framework used on a website with just one click.
