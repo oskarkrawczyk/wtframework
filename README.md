@@ -9,7 +9,7 @@ WTFramework Bookmarklet – check the JavaScript framework used on a website wit
 * Glow
 * jQuery UI
 * jQuery
-* Midori
+* Midori *(no version detection)*
 * MochiKit
 * MooTools A.R.T.
 * MooTools Core
@@ -22,6 +22,5 @@ WTFramework Bookmarklet – check the JavaScript framework used on a website wit
 * RightJS
 * Script.aculo.us
 * Scripty2
-* Yahoo UI
-* Yahoo UI
+* YUI
 * ZK
