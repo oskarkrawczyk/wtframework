@@ -58,8 +58,8 @@
         'RightJS',
         'Script.aculo.us',
         'Scripty2',
-        'Yahoo UI',
-        'Yahoo UI',
+        'YUI',
+        'YUI',
         'ZK'
     ];
 
