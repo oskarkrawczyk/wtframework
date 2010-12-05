@@ -1,44 +1,66 @@
 (function(){
-    
+
     var fwUl, fwLi = [], fwUpdate, fwRemove, wtFramework = document.getElementById('_wtframework'), howMany = 0;
-    
+
     fwRemove = function(){
         document.body.removeChild(fwUl);
     };
-    
+
     if (wtFramework){
         document.body.removeChild(wtFramework);
         return;
     }
 
     var fwNamespaces = [
-        'MooTools.version',
-        'MooTools.More.version',
         'base2.version',
+        'Clientcide.version',
         'dojo.version',
         'Ext.version',
-        'jQuery.fn.jquery',
+        'glow.VERSION',
         '$.ui.version',
+        'jQuery.fn.jquery',
+        'midori.domReady',
         'MochiKit.MochiKit.VERSION',
+        'ART.version',
+        'MooTools.version',
+        'MooTools.More.version',
+        'Processing.version',
         'Prototype.Version',
+        'window.qx.$$libraries.qx.version',
+        'Raphael.version',
+        'Rico.Version',
+        'RightJS.version',
         'Scriptaculous.Version',
+        'S2.Version',
+        'YUI.version',
         'YAHOO.VERSION',
-        'S2.Version'
+        'zk.version'
     ];
 
     var fwNames = [
-        'MooTools Core',
-        'MooTools More',
         'Base2',
+        'Clientcide Libraries',
         'Dojo',
         'Ext JS',
-        'jQuery',
+        'Glow',
         'jQuery UI',
+        'jQuery',
+        'Midori',
         'MochiKit',
+        'MooTools A.R.T.',
+        'MooTools Core',
+        'MooTools More',
+        'Processing.js',
         'Prototype',
+        'Qooxdoo',
+        'Raphael',
+        'Rico',
+        'RightJS',
         'Script.aculo.us',
+        'Scripty2',
         'Yahoo UI',
-        'Scripty2'
+        'Yahoo UI',
+        'ZK'
     ];
 
     var fwStyleLi = {
@@ -47,7 +69,7 @@
         padding: '8px 10px',
         margin: '0 0 5px',
         listStyle: 'none',
-        font: 'bold 11px "Lucida Grande"',
+        font: 'bold 11px sans-serif',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
         color: '#fff',
         BorderRadius: '5px',
@@ -64,9 +86,8 @@
         cssFloat: 'right',
         clear: 'both'
     };
-    
+
     var fwStyleUl = {
-        width: '190px',
         position: 'fixed',
         padding: '0',
         margin: '0',
@@ -94,13 +115,13 @@
 
     var showInfo = function (fwName, fwVersion){
         fwLi = document.createElement('li');
-        fwLi.innerHTML = fwName + (fwVersion ? ' (' + fwVersion + ')' : '');
+        fwLi.innerHTML = fwName + ((fwVersion && (typeof(fwVersion) != 'object') && (fwVersion != '%build%')) ? ' (' + fwVersion + ')' : '');
         for (var s in fwStyleLi){
             fwLi.style[s] = fwStyleLi[s];
         }
         fwUl.appendChild(fwLi);
     };
-    
+
     for (var fwNs in fwNamespaces){
         if (fwNamespaces.hasOwnProperty(fwNs)){
             var idents = fwNamespaces[fwNs].split('.'), exists = window;
@@ -117,8 +138,8 @@
             }
         }
     }
-    
-    if (howMany < 1){
-        showInfo('No framework detected');
+
+    if (!howMany){
+        showInfo('No known framework detected.');
     }
 })();
