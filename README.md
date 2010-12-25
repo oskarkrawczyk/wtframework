@@ -39,10 +39,10 @@
 
 ---
 
-### How-to
+### Information
 
 * Source/WTFramework.src.js - the original source
-- Source/WTFramework.bookmarklet.js - the minified bookmarklet
+* Source/WTFramework.bookmarklet.js - the minified bookmarklet
 
 ---
 
