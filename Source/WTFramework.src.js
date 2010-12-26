@@ -49,7 +49,7 @@
 		padding: '8px 10px',
 		margin: '0 0 5px',
 		listStyle: 'none',
-		font: 'bold 11px sans-serif',
+		font: 'bold 11px Helvetica, Arial, sans-serif',
 		backgroundColor: 'rgba(0, 0, 0, 0.7)',
 		color: '#fff',
 		BorderRadius: '5px',
