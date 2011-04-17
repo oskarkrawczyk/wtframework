@@ -1,11 +1,11 @@
 (function(){
 	var fwUl, fwLi = [], fwRemove, wtFramework = document.getElementById('_wtframework'), howMany = 0;
 
-	fwRemove = function() {
+	fwRemove = function(){
 		document.body.removeChild(fwUl);
 	};
 
-	if (wtFramework) {
+	if (wtFramework){
 		document.body.removeChild(wtFramework);
 		return;
 	}
@@ -83,39 +83,39 @@
 
 	fwUl = document.createElement('ul');
 
-	for (var prop in props) {
+	for (var prop in props){
 		fwUl[prop] = props[prop];
 	}
 
-	for (var s in fwStyleUl) {
+	for (var s in fwStyleUl){
 		fwUl.style[s] = fwStyleUl[s];
 	}
 
 	document.body.appendChild(fwUl);
 
-	var showInfo = function(fwName, fwVersion) {
+	var showInfo = function(fwName, fwVersion){
 		fwLi = document.createElement('li');
 		fwLi.innerHTML = fwName + ((fwVersion && (typeof(fwVersion) == 'string') && (fwVersion != '%build%')) ? ' (' + fwVersion + ')' : '');
-		for (var s in fwStyleLi) {
+		for (var s in fwStyleLi){
 			fwLi.style[s] = fwStyleLi[s];
 		}
 		fwUl.appendChild(fwLi);
 	};
 
-	for (var fwNs in fwList) {
-		if (fwList.hasOwnProperty(fwNs)) {
+	for (var fwNs in fwList){
+		if (fwList.hasOwnProperty(fwNs)){
 			var exists = window;
-			for (var i = 0, idents = fwList[fwNs].split('.'); i < idents.length; i++) {
+			for (var i = 0, idents = fwList[fwNs].split('.'); i < idents.length; i++){
 				exists = exists && exists[idents[i]];
 			}
-			if (exists) {
+			if (exists){
 				showInfo(fwNs, exists);
 				howMany++;
 			}
 		}
 	}
 
-	if (!howMany) {
+	if (!howMany){
 		showInfo('No known framework detected.');
 	}
 })();
