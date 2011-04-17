@@ -1,11 +1,11 @@
 (function(){
 	var fwUl, fwLi = [], fwRemove, wtFramework = document.getElementById('_wtframework'), howMany = 0;
 
-	fwRemove = function(){
+	fwRemove = function() {
 		document.body.removeChild(fwUl);
 	};
 
-	if (wtFramework){
+	if (wtFramework) {
 		document.body.removeChild(wtFramework);
 		return;
 	}
@@ -49,20 +49,20 @@
 		padding: '8px 10px',
 		margin: '0 0 5px',
 		listStyle: 'none',
-		font: 'bold 11px Helvetica, Arial, sans-serif',
+		font: 'bold 11px sans-serif',
 		backgroundColor: 'rgba(0, 0, 0, 0.7)',
 		color: '#fff',
-		BorderRadius: '5px',
 		MozBorderRadius: '5px',
-		WebkitBorderRadius: '5px',
+		webkitBorderRadius: '5px',
+		borderRadius: '5px',
 		borderTop: 'solid 1px rgba(255, 255, 255, 0.4)',
 		borderLeft: 'solid 1px rgba(0, 0, 0, 0.8)',
 		borderRight: 'solid 1px rgba(0, 0, 0, 0.8)',
 		borderBottom: 'solid 1px #000',
 		textShadow: '0 1px 0 #000',
-		BoxShadow: '0 -1px 0 #000',
 		MozBoxShadow: '0 -1px 0 #000',
-		WebkitBoxShadow: '0 -1px 0 #000',
+		webkitBoxShadow: '0 -1px 0 #000',
+		boxShadow: '0 -1px 0 #000',
 		cssFloat: 'right',
 		clear: 'both'
 	};
@@ -83,39 +83,39 @@
 
 	fwUl = document.createElement('ul');
 
-	for (var prop in props){
+	for (var prop in props) {
 		fwUl[prop] = props[prop];
 	}
 
-	for (var s in fwStyleUl){
+	for (var s in fwStyleUl) {
 		fwUl.style[s] = fwStyleUl[s];
 	}
 
 	document.body.appendChild(fwUl);
 
-	var showInfo = function(fwName, fwVersion){
+	var showInfo = function(fwName, fwVersion) {
 		fwLi = document.createElement('li');
 		fwLi.innerHTML = fwName + ((fwVersion && (typeof(fwVersion) == 'string') && (fwVersion != '%build%')) ? ' (' + fwVersion + ')' : '');
-		for (var s in fwStyleLi){
+		for (var s in fwStyleLi) {
 			fwLi.style[s] = fwStyleLi[s];
 		}
 		fwUl.appendChild(fwLi);
 	};
 
-	for (var fwNs in fwList){
-		if (fwList.hasOwnProperty(fwNs)){
+	for (var fwNs in fwList) {
+		if (fwList.hasOwnProperty(fwNs)) {
 			var exists = window;
-			for (var i = 0, idents = fwList[fwNs].split('.'); i < idents.length; i++){
+			for (var i = 0, idents = fwList[fwNs].split('.'); i < idents.length; i++) {
 				exists = exists && exists[idents[i]];
 			}
-			if (exists){
+			if (exists) {
 				showInfo(fwNs, exists);
 				howMany++;
 			}
 		}
 	}
 
-	if (!howMany){
+	if (!howMany) {
 		showInfo('No known framework detected.');
 	}
 })();
