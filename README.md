@@ -44,10 +44,6 @@
 * Source/WTFramework.src.js - the original source
 * Source/WTFramework.bookmarklet.js - the minified bookmarklet
 
-### Todo
-
-* Setup a GitHub Page using the design from http://nouincolor.com/wtframework/2.0/
-
 ---
 
 ### Author:
