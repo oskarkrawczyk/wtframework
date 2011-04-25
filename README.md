@@ -50,4 +50,8 @@
 
 ---
 
-***Written by [Oskar Krawczyk](http://nouincolor.com), updated by [Fabian Beiner](https://github.com/FabianBeiner).***
+**Author:** 
+* [Oskar Krawczyk](http://nouincolor.com)
+
+**Contributors:**
+* [Fabian Beiner](https://github.com/FabianBeiner)
