@@ -1,0 +1,117 @@
+@-webkit-keyframes spin {		
+	0% { -webkit-transform: rotateX(360deg); }
+	100%   { -webkit-transform: rotateX(0deg); }
+}
+
+body {
+   background: #FAFAFA url(../img/bg.jpg) 0 0 no-repeat;
+   position: relative;
+   padding: 0;
+   margin: 0;
+   font-family: Georgia, "Times New Roman", Times, serif;
+   color: #666666;
+   font-size: .7em;
+}
+
+h1,h2,h3,ul,ol,li,p,strong {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   font-size: 1em;
+   font-weight: normal;
+}
+
+a {
+   color: #831C17;
+   
+}
+
+h1 {
+   position: absolute;
+   top: -900em;
+   left: -900em;
+}
+
+h2 {
+   text-transform: uppercase;
+   color: #667E72;
+   letter-spacing: 1px;
+   font-size: .9em;
+   background: url(../img/spacer.png) 0 100% repeat-x;
+   padding: 0 0 5px;
+   margin: 0 0 10px;
+}
+
+#wrapper {
+   margin: 140px 0 0 293px;
+   width: 397px;
+}
+
+#wtframework-bookmarklet {
+   height: 145px;
+   margin: 0 0 40px;
+}
+
+   #wtframework-bookmarklet li,
+   #wtframework-bookmarklet a {
+      width: 100%;
+      display: block;
+      height: 145px;
+      cursor: move;
+      position: relative;
+   }
+   
+   #wtframework-bookmarklet a {
+      width: 100%;
+      display: block;
+      height: 145px;
+   }
+   
+   #wtframework-bookmarklet a strong {
+      background: url(../img/wtf-logo.png) 0 0 no-repeat;
+      display: block;
+      height: 44px;
+      width: 200px;
+      position: absolute;
+      top: 50px;
+      left: 70px;
+      text-indent: -9000em;
+   }
+   
+   #wtframework-bookmarklet a span {
+      background: url(../img/wtf-version.png) 0 0 no-repeat;
+      display: block;
+      height: 75px;
+      width: 75px;
+      position: absolute;
+      top: 38px;
+      left: 252px;
+   }
+   
+   #wtframework-bookmarklet a:hover span {
+      -webkit-transitions: all;
+   	-webkit-animation: spin 0.5s ease-out;
+   }
+   
+#wtframework-info {
+   
+}
+
+   #wtframework-info li {
+      margin: 0 0 5px;
+   }
+   
+#info-box {
+   position: relative;
+}
+
+#retweet {
+   position: absolute;
+   right: 0;
+   top: 30px;
+   width: 50px;
+}
+
+.backTo {
+   padding: 10px 0 0;
+}
