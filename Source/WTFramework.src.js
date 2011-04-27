@@ -33,6 +33,7 @@
 		'Raphaël': 'Raphael.version',
 		'Rico': 'Rico.Version',
 		'RightJS': 'RightJS.version',
+		'Sammy': 'Sammy.VERSION',
 		'Script.aculo.us': 'Scriptaculous.Version',
 		'Scripty2': 'S2.Version',
 		'Snack': 'snack.v',
