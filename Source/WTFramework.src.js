@@ -96,7 +96,7 @@
 
 	var showInfo = function(fwName, fwVersion){
 		fwLi = document.createElement('li');
-		fwLi.innerHTML = fwName + ((fwVersion && (typeof(fwVersion) == 'string') && (fwVersion != '%build%')) ? ' (' + fwVersion + ')' : '');
+		fwLi.innerHTML = fwName + ((fwVersion && (fwVersion != '%build%')) ? ' (' + fwVersion + ')' : '');
 		for (var s in fwStyleLi){
 			fwLi.style[s] = fwStyleLi[s];
 		}
@@ -110,7 +110,7 @@
 				exists = exists && exists[idents[i]];
 			}
 			if (exists){
-				showInfo(fwNs, exists);
+				showInfo(fwNs, exists.toString());
 				howMany++;
 			}
 		}
