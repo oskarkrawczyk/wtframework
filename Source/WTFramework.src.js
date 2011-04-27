@@ -35,6 +35,7 @@
 		'RightJS': 'RightJS.version',
 		'Script.aculo.us': 'Scriptaculous.Version',
 		'Scripty2': 'S2.Version',
+		'Snack': 'snack.v',
 		'SproutCore': 'SC.isReady',
 		'Spry': 'Spry.$',
 		'YUI 3': 'YUI.version',
