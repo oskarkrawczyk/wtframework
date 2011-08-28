@@ -33,8 +33,10 @@
 		'Raphaël': 'Raphael.version',
 		'Rico': 'Rico.Version',
 		'RightJS': 'RightJS.version',
+		'Sammy': 'Sammy.VERSION',
 		'Script.aculo.us': 'Scriptaculous.Version',
 		'Scripty2': 'S2.Version',
+		'Snack': 'snack.v',
 		'SproutCore': 'SC.isReady',
 		'Spry': 'Spry.$',
 		'YUI 3': 'YUI.version',
@@ -95,7 +97,7 @@
 
 	var showInfo = function(fwName, fwVersion){
 		fwLi = document.createElement('li');
-		fwLi.innerHTML = fwName + ((fwVersion && (typeof(fwVersion) == 'string') && (fwVersion != '%build%')) ? ' (' + fwVersion + ')' : '');
+		fwLi.innerHTML = fwName + ((fwVersion && (fwVersion != '%build%')) ? ' (' + fwVersion + ')' : '');
 		for (var s in fwStyleLi){
 			fwLi.style[s] = fwStyleLi[s];
 		}
@@ -109,7 +111,7 @@
 				exists = exists && exists[idents[i]];
 			}
 			if (exists){
-				showInfo(fwNs, exists);
+				showInfo(fwNs, exists.toString());
 				howMany++;
 			}
 		}
