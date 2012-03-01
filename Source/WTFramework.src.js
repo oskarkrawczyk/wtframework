@@ -13,7 +13,7 @@
 
     function fwItem(verPath, cdnjsName) {
         this.verPath   = verPath;
-        this.cdnjsName = cdnjsName;
+        this.cdnjsName = cdnjsName || '';
     }
     
     var fwList = {
