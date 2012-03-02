@@ -115,7 +115,7 @@
             s;
 
         // Show additional info from cdnjs
-        var cdnjsInfo = (pkgs[fwList[fwName].cdnjsName]) ? pkgs[fwList[fwName].cdnjsName] : null;
+        var cdnjsInfo = (fwList[fwName] && pkgs[fwList[fwName].cdnjsName]) ? pkgs[fwList[fwName].cdnjsName] : null;
 
         var curVer = (cdnjsInfo) ? cdnjsInfo.version : null;
         var homepageUrl = (cdnjsInfo) ? cdnjsInfo.homepage : '#';
