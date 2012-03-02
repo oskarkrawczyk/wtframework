@@ -1,7 +1,7 @@
 # WTFramework Bookmarklet
 **Check the JavaScript framework used on a website with just one click**
 
-This fork of WTFramwork contacts cdnjs.com for the latest version numbers, to compare with the versions found on the page.
+This fork of WTFramwork contacts [cdnjs.com](http://www.cdnjs.com) for the latest version numbers, to compare with the versions found on the page.
 
 [Installation page](http://cgmartin.github.com/wtframework/)
 
