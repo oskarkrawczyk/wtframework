@@ -90,7 +90,8 @@
 
     var fwStyleA = {
         color: '#fff',
-        font: 'bold 11px sans-serif'
+        font: 'bold 11px sans-serif',
+        textDecoration: 'none'
     };
 
     var props = {
