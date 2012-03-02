@@ -1,6 +1,8 @@
 # WTFramework Bookmarklet
 **Check the JavaScript framework used on a website with just one click**
 
+[Installation page](http://cgmartin.github.com/wtframework/)
+
 ---
 
 ### Currently supporting the following frameworks:
@@ -53,3 +55,4 @@
 ### Contributors:
 
 * [Fabian Beiner](https://github.com/FabianBeiner)
+* [Christopher Martin](https://github.com/cgmartin)
