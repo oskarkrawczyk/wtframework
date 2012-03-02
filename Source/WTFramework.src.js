@@ -85,7 +85,7 @@
         margin: '0',
         right: '10px',
         top: '10px',
-        zIndex: 30000
+        zIndex: 16777271
     };
 
     var fwStyleA = {
