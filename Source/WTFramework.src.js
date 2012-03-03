@@ -36,6 +36,7 @@
         'DHTMLX'                     : new fwItem('dhtmlx'),
         'Dojo'                       : new fwItem('dojo.version', 'dojo'),
         'Ember'                      : new fwItem('Ember.VERSION', 'ember.js'),
+        'Enyo'                       : new fwItem('enyo'),
         'Ext JS'                     : new fwItem('Ext.version', 'ext-core'),
         'fancyBox'                   : new fwItem('$.fancybox.version', 'fancybox'),
         'flexie'                     : new fwItem('Flexie.version', 'flexie'),
@@ -54,6 +55,7 @@
         'JavaScriptMVC'              : new fwItem('steal.fn'),
         'jQuery'                     : new fwItem('jQuery.fn.jquery', 'jquery'),
         'jQuery Easing'              : new fwItem('jQuery.easing.easeOutQuad', 'jquery-easing'),
+        'jQuery Mobile'              : new fwItem('jQuery.mobile'),
         'jQuery throttle / debounce' : new fwItem('jQuery.debounce', 'jquery-throttle-debounce'),
         'jQuery Tools'               : new fwItem('jQuery.tools.version', 'jquery-tools'),
         'jQuery Cycle'               : new fwItem('jQuery.fn.cycle.ver', 'jquery.cycle'),
@@ -220,7 +222,13 @@
                     exists = exists && exists[idents[i]];
                 }
                 if (exists) {
-                    var version = (typeof exists === 'string') ? exists : false;
+                    var version = false;
+                    if (typeof exists === 'string') {
+                        version = exists;
+                    } else if (typeof exists === 'object' && exists.hasOwnProperty('toString')) {
+                        version = exists.toString();
+                    }
+
                     showInfo(fwNs, version);
                     howMany++;
                 }
