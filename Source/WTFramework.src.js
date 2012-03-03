@@ -1,6 +1,5 @@
 (function() {
-    var fwUl, fwLi = [],
-        fwRemove, wtFramework = document.getElementById('_wtframework');
+    var fwUl, fwLi = [], fwRemove, wtFramework = document.getElementById('_wtframework');
 
     fwRemove = function() {
         document.body.removeChild(fwUl);
