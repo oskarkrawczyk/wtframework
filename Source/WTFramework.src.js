@@ -54,7 +54,7 @@
         'JS State Machine'           : new fwItem('StateMachine.VERSION', 'javascript-state-machine'),
         'JavaScriptMVC'              : new fwItem('steal.fn'),
         'jQuery'                     : new fwItem('jQuery.fn.jquery', 'jquery'),
-        'jQuery Easing'              : new fwItem('jQuery.easing', 'jquery-easing'),
+        'jQuery Easing'              : new fwItem('jQuery.easing.easeOutQuad', 'jquery-easing'),
         'jQuery throttle / debounce' : new fwItem('jQuery.debounce', 'jquery-throttle-debounce'),
         'jQuery Tools'               : new fwItem('jQuery.tools.version', 'jquery-tools'),
         'jQuery Cycle'               : new fwItem('jQuery.fn.cycle.ver', 'jquery.cycle'),
