@@ -110,20 +110,20 @@
     var fwStyleLi = {
         'cursor'            : 'pointer',
         'text-align'        : 'left',
-        'padding'           : '10px 14px',
-        'margin'            : '0 0 5px',
+        'padding'           : '12px 16px',
+        'margin'            : '0 0 8px',
         'list-style'        : 'none',
         'font'              : 'bold 12px Helvetica, Arial, sans-serif',
         //'background'    : '-moz-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, rgba(243, 243, 243, 0.9) 100%)', // FF3.6+
         //'background'    : '-webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(243, 243, 243, 0.8) 100%)', // Chrome10+, Safari5.1+
         //'background'    : '-o-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, rgba(243, 243, 243, 0.9) 100%)', // Opera 11.10+
         //'background'    : 'linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, rgba(243, 243, 243, 0.9) 100%)', // W3C
-        'background'        : 'rgba(243, 243, 243, 0.8)',
+        'background'        : 'rgba(243, 243, 243, 0.9)',
         'color'             : '#666',
         'border-radius'     : '4px',
         'border'            : 'solid 1px rgba(255, 255, 255, 0.9)',
         'text-shadow'       : '0 1px 0 #fff',
-        'box-shadow'        : '0 0 10px rgba(0, 0, 0, 0.7)',
+        'box-shadow'        : '0 0 8px rgba(0, 0, 0, 0.6)',
         'float'             : 'right',
         'clear'             : 'both',
         'min-width'         : '170px'
