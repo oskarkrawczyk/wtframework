@@ -209,8 +209,8 @@
                     exists = exists && exists[idents[i]];
                 }
                 if (exists) {
-
-                    showInfo(fwNs, exists.toString());
+                    var version = (typeof exists === 'string') ? exists : false;
+                    showInfo(fwNs, version);
                     howMany++;
                 }
             }
