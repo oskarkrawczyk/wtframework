@@ -3,7 +3,7 @@
 
 WTFramwork also contacts [cdnjs.com](http://www.cdnjs.com) for the latest version numbers, to compare with the versions found on the page.
 
-[Installation page](http://cgmartin.github.com/wtframework/)
+[Installation page](http://oskarkrawczyk.github.com/wtframework/)
 
 ---
 
