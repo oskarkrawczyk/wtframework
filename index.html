@@ -1,101 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-   <head>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="WTFramework Bookmarklet, check the JavaScript framework used on a website with just one click" />
+    <meta name="keywords" content="wtframework, checking frameworks, javascript frameworks, mootools, jquery, yui" />
+    
+    <!-- iPhone -->
+    <meta name="viewport" content="width=750" />
+    
+    <link rel="stylesheet" href="static/css/screen.min.css" type="text/css" media="screen" title="" charset="utf-8" />
+    
+    <!--[if IE]>
+      <script type="text/javascript" charset="utf-8"> 
+        #wrapper {
+          display: none;
+        }
+      </script>
+    <![endif]-->
+    
+    <title>WTFramework 2.1</title>
+  </head>
+  
+  <body>
+    
+    <h1>WTFramework 2.1</h1>
+    
+    <!--[if IE]>
+      <p>Internet Explorer you say? I say NO, go install Firefox/Safari/Chrome/Opera and come back then.</p>
+    <![endif]-->
+    
+    <div id="wrapper">
+      <ul id="wtframework-bookmarklet">
+        <li><a title="" href="javascript:var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);z.setAttribute('src','https://raw.github.com/oskarkrawczyk/wtframework/master/Source/WTFramework.src.js');b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}void(0)"><strong>WTFramework</strong> <span></span></a></li>
+      </ul>
       
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   	<meta name="description" content="WTFramework Bookmarklet, check the JavaScript framework used on a website with just one click" />
-   	<meta name="keywords" content="wtframework, checking frameworks, javascript frameworks, mootools, jquery, yui" />
-
-   	<meta http-equiv="content-language" content="en" />
-   	<meta http-equiv="imagetoolbar" content="no" />
-   	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-   	<meta name="MSSmartTagsPreventParsing" content="true" />
-
-   	<meta name="language" content="en-UK" />
-   	<meta name="classification" content="public" />
-   	<meta name="resource-type" content="document" />
-   	<meta name="author" content="Oskar Krawczyk" />
-   	<meta name="copyright" content="Oskar Krawczyk" />
-
-   	<!-- iPhone -->
-   	<meta name="viewport" content="width=750" />
-
-   	<!-- DCMI -->
-   	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-   	<meta name="DC.title" lang="en" content="WTFramework 2.0" />
-   	<meta name="DC.description" lang="en" content="WTFramework Bookmarklet, check the JavaScript framework used on a website with just one click." />
-   	<meta name="DC.language" scheme="RFC1766" content="en" />
-   	<meta name="DC.coverage" content="World" />
-   	<meta name="DC.format" scheme="IMT" content="text/html" />
-   	<meta name="DC.contributor" content="nouincolor.com" />
-   	<meta name="DC.author" content="Oskar Krawczyk" />
-   	<meta name="DC.publisher" content="Oskar Krawczyk" />
-
-   	<meta name="robots" content="index,follow" />
-   	<meta name="geo.region" content="England" />
-   	<meta name="geo.placename" content="London" />
-   	
-   	<link rel="stylesheet" href="static/css/screen.min.css" type="text/css" media="screen" title="" charset="utf-8" />
-   	
-      <!--[if IE]>
-   		<script type="text/javascript" charset="utf-8">	
-   			#wrapper {
-   				display: none;
-   			}
-   		</script>
-   	<![endif]-->
-      
-   	<title>WTFramework 2.0</title>
-		<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-165199-7']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-  })();
-
-</script>
-   </head>
-
-   <body>
-
-      <h1>WTFramework 2.1</h1>
-      
-      <!--[if IE]>
-   		<p>Internet Explorer you say? I say NO, go install Firefox/Safari/Chrome/Opera and come back then.</p>
-   	<![endif]-->
-      
-      <div id="wrapper">
-         
-         <ul id="wtframework-bookmarklet">
-            <li><a title="" href="javascript:var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);z.setAttribute('src','https://raw.github.com/cgmartin/wtframework/master/Source/WTFramework.src.js');b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}void(0)"><strong>WTFramework</strong> <span></span></a></li>
-         </ul>
-
-		<div id="info-box">
-			<h2>Version 2.1</h2>
-			<ul id="wtframework-info">
-				<li>Re-written from scratch</li>
-				<li>New look</li>
-				<li>More frameworks</li>
-				<li>Capable of detecting multiple frameworks</li>
-				<li>Compares versions with latest on cdnjs.com</li>
-				<li><a title="Fork on GitHub" href="http://github.com/cgmartin/wtframework">Ready to be forked</a> on GitHub</li>
-				<li class="backTo">&larr; <a title="nouincolor.com" href="http://nouincolor.com">back to nouincolor.com</a></li>
-			</ul>
-         	
-			<div id="retweet">
-				<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
-			</div> <!-- /retweet -->
-			
-		</div> <!-- /info-box -->
-
-      </div>
-
-   </body>
+      <div id="info-box">
+        <h2>Version history</h2>
+        <ul id="wtframework-info">
+          <li>[2.1] Compares versions with latest on cdnjs.com</li>
+          <li>[2.0] Re-written from scratch</li>
+          <li>[2.0] New look</li>
+          <li>[2.0] More frameworks</li>
+          <li>[2.0] Capable of detecting multiple frameworks</li>
+          <li><a title="Fork on GitHub" href="http://github.com/cgmartin/wtframework">Ready to be forked</a> on GitHub</li>
+          <li class="backTo">&larr; <a title="nouincolor.com" href="http://nouincolor.com">back to nouincolor.com</a></li>
+        </ul>
+        
+        <div id="retweet">
+          <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+        </div> <!-- /retweet -->
+      </div> <!-- /info-box -->
+    </div> <!-- /wrapper -->
+  </body>
 </html>
