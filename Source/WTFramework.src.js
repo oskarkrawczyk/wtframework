@@ -10,8 +10,11 @@
         return;
     }
 
-    function fwItem(verPath, cdnjsName) {
-        this.verPath   = verPath;
+    function fwItem(verPaths, cdnjsName) {
+        if ( ! (verPaths instanceof Array)) {
+            verPaths = [ verPaths ];
+        }
+        this.verPaths  = verPaths;
         this.cdnjsName = cdnjsName || '';
     }
     
@@ -41,7 +44,7 @@
         'Dojo Mobile'                : new fwItem('dojox.mobile'),
         'Ember'                      : new fwItem('Ember.VERSION', 'ember.js'),
         'Enyo'                       : new fwItem('enyo'),
-        'Ext JS'                     : new fwItem('Ext.version', 'ext-core'),
+        'Ext JS'                     : new fwItem(['Ext.version','Ext.versions.core.version'], 'ext-core'),
         'fancyBox'                   : new fwItem('$.fancybox.version', 'fancybox'),
         'flexie'                     : new fwItem('Flexie.version', 'flexie'),
         'Flot'                       : new fwItem('$.plot.version', 'flot'),
@@ -115,8 +118,7 @@
         'WebFont Loader'             : new fwItem('WebFont', 'webfont'),
         'xui'                        : new fwItem('x$', 'xuijs'),
         'yepnope.js'                 : new fwItem('yepnope', 'yepnope'),
-        'YUI 3'                      : new fwItem('YUI.version', 'yui'),
-        'YUI 2'                      : new fwItem('YAHOO.VERSION', 'yui'),
+        'YUI'                        : new fwItem(['YAHOO.VERSION', 'YUI.version'], 'yui'),
         'Zepto'                      : new fwItem('Zepto', 'zepto'),
         'ZK'                         : new fwItem('zk.version')
     };
@@ -229,20 +231,30 @@
 
         for (var fwNs in fwList) {
             if (fwList.hasOwnProperty(fwNs)) {
-                var exists = window;
-                for (var i = 0, idents = fwList[fwNs].verPath.split('.'); i < idents.length; i++) {
-                    exists = exists && exists[idents[i]];
-                }
-                if (exists) {
-                    var version = false;
-                    if (typeof exists === 'string') {
-                        version = exists;
-                    } else if (typeof exists === 'object' && exists.hasOwnProperty('toString')) {
-                        version = exists.toString();
-                    }
+                // Loop through all possible version paths
+                for (var j = 0; j < fwList[fwNs].verPaths.length; j++) {
+                    var exists = window,
+                        verPath = fwList[fwNs].verPaths[j];
 
-                    showInfo(fwNs, version);
-                    howMany++;
+                    for (var i = 0, idents = verPath.split('.'); i < idents.length; i++) {
+                        exists = exists && exists[idents[i]];
+                    }
+                    if (exists) {
+                        var version = false;
+                        if (typeof exists === 'string' && ! exists.match(/^<%=/)) {
+                            version = exists;
+                        } else if (typeof exists === 'object' && exists.hasOwnProperty('toString')) {
+                            version = exists.toString();
+                        }
+                        if (version !== false) {
+                            // remove build number ex. "(12345)"
+                            version = version.replace(/\s*\(.+\)\s*/, '');
+                        }
+
+                        showInfo(fwNs, version);
+                        howMany++;
+                        break;
+                    }
                 }
             }
         }
