@@ -51,7 +51,6 @@ WTFramwork also contacts [cdnjs.com](http://www.cdnjs.com) for the latest versio
 * [JS State Machine](https://github.com/jakesgordon/javascript-state-machine)
 * [JavaScriptMVC](http://javascriptmvc.com/) *
 * [jQuery](http://jquery.com/)
-* [jQuery Easing](http://gsgd.co.uk/sandbox/jquery/easing/) *
 * [jQuery throttle / debounce](https://github.com/cowboy/jquery-throttle-debounce) *
 * [jQuery Tools](http://flowplayer.org/tools/index.html)
 * [jQuery Mobile](http://jquerymobile.com/) *
