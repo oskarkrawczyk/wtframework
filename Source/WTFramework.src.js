@@ -10,18 +10,24 @@
         return;
     }
 
-    function fwItem(verPath, cdnjsName) {
-        this.verPath   = verPath;
+    function fwItem(verPaths, cdnjsName) {
+        if ( ! (verPaths instanceof Array)) {
+            verPaths = [ verPaths ];
+        }
+        this.verPaths  = verPaths;
         this.cdnjsName = cdnjsName || '';
     }
     
     var fwList = {
         'Ace'                        : new fwItem('ace', 'ace'),
         'ActiveJS'                   : new fwItem('ActiveSupport'),
-        'Base2'                      : new fwItem('base2.version'),
+        'AngularJS'                  : new fwItem('angular.version.full'),
         'Backbone.js'                : new fwItem('Backbone.VERSION', 'backbone.js'),
         'Backbone localStorage'      : new fwItem('Store', 'backbone-localstorage.js'),
+        'Base2'                      : new fwItem('base2.version'),
+        'Batman.js'                  : new fwItem('Batman'),
         'CamanJS'                    : new fwItem('Caman.version.release', 'camanjs'),
+        'Chainvas'                   : new fwItem('Chainvas'),
         'CoffeeScript'               : new fwItem('CoffeeScript', 'coffee-script'),
         'Clientcide Libraries'       : new fwItem('Clientcide.version'),
         'Crafty'                     : new fwItem('Crafty.init'),
@@ -35,8 +41,10 @@
         'DocumentUp'                 : new fwItem('DocumentUp', 'documentup'),
         'DHTMLX'                     : new fwItem('dhtmlx'),
         'Dojo'                       : new fwItem('dojo.version', 'dojo'),
+        'Dojo Mobile'                : new fwItem('dojox.mobile'),
         'Ember'                      : new fwItem('Ember.VERSION', 'ember.js'),
-        'Ext JS'                     : new fwItem('Ext.version', 'ext-core'),
+        'Enyo'                       : new fwItem('enyo'),
+        'Ext JS'                     : new fwItem(['Ext.version','Ext.versions.core.version'], 'ext-core'),
         'fancyBox'                   : new fwItem('$.fancybox.version', 'fancybox'),
         'flexie'                     : new fwItem('Flexie.version', 'flexie'),
         'Flot'                       : new fwItem('$.plot.version', 'flot'),
@@ -48,21 +56,25 @@
         'Head JS'                    : new fwItem('head.js', 'headjs'),
         'Highcharts JS'              : new fwItem('Highcharts.version', 'highcharts'),
         'History.js'                 : new fwItem('History', 'History.js'),
+        'Hogan.js'                   : new fwItem('Hogan'),
         'html5shiv'                  : new fwItem('html5', 'html5shiv'),
         'ICanHaz.js'                 : new fwItem('ich.VERSION', 'ICanHaz.js'),
         'JS State Machine'           : new fwItem('StateMachine.VERSION', 'javascript-state-machine'),
         'JavaScriptMVC'              : new fwItem('steal.fn'),
         'jQuery'                     : new fwItem('jQuery.fn.jquery', 'jquery'),
-        'jQuery Easing'              : new fwItem('jQuery.easing.easeOutQuad', 'jquery-easing'),
+        'jQuery Mobile'              : new fwItem('jQuery.mobile'),
         'jQuery throttle / debounce' : new fwItem('jQuery.debounce', 'jquery-throttle-debounce'),
         'jQuery Tools'               : new fwItem('jQuery.tools.version', 'jquery-tools'),
         'jQuery Cycle'               : new fwItem('jQuery.fn.cycle.ver', 'jquery.cycle'),
         'jQuery UI'                  : new fwItem('$.ui.version', 'jqueryui'),
         'js-signals'                 : new fwItem('signals.VERSION', 'js-signals'),
         'JSXGraph'                   : new fwItem('JXG', 'jsxgraph'),
+        'Kendo UI'                   : new fwItem('kendo'),
         'Knockout'                   : new fwItem('ko', 'knockout'),
         'LABjs'                      : new fwItem('$LAB', 'labjs'),
         'LESS'                       : new fwItem('less', 'less.js'),
+        'LightningJS'                : new fwItem('lightningjs'),
+        'LungoJS'                    : new fwItem('LUNGO.VERSION'),
         'Masonry'                    : new fwItem('jQuery.fn.masonry', 'masonry'),
         'Midori'                     : new fwItem('midori.domReady'),
         'Modernizr'                  : new fwItem('Modernizr._version', 'modernizr'),
@@ -74,6 +86,7 @@
         'Ninja UI'                   : new fwItem('jQuery.ninja.version', 'ninjaui'),
         'Noisy'                      : new fwItem('jQuery.fn.noisy', 'noisy'),
         'oCanvas'                    : new fwItem('oCanvas', 'ocanvas'),
+        'o2.js'                      : new fwItem('o2.version'),
         'PageDown'                   : new fwItem('Markdown', 'pagedown'),
         'Prettify'                   : new fwItem('prettyPrint', 'prettify'),
         'Processing.js'              : new fwItem('Processing.version', 'processing.js'),
@@ -87,22 +100,25 @@
         '$script.js'                 : new fwItem('$script', 'script.js'),
         'Script.aculo.us'            : new fwItem('Scriptaculous.Version', 'scriptaculous'),
         'Scripty2'                   : new fwItem('S2.Version'),
+        'Sencha Touch'               : new fwItem('Ext.util.TapRepeater'),
         'Sizzle'                     : new fwItem('Sizzle', 'sizzle'),
         'Snack'                      : new fwItem('snack.v'),
         'Socket.io'                  : new fwItem('io.version', 'socket.io'),
         'Spine'                      : new fwItem('Spine.version', 'spinejs'),
         'SproutCore'                 : new fwItem('SC.isReady'),
         'Spry'                       : new fwItem('Spry.$'),
+        'Sugar'                      : new fwItem('Object.SugarMethods'),
         'SWFObject'                  : new fwItem('swfobject', 'swfobject'),
+        'Terrific'                   : new fwItem('Tc'),
         'Tiny Scrollbar'             : new fwItem('jQuery.fn.tinyscrollbar', 'tinyscrollbar'),
         'Twitter Lib'                : new fwItem('twitterlib', 'twitterlib.js'),
         'Underscore.js'              : new fwItem('_.VERSION', 'underscore.js'),
         'Waypoints'                  : new fwItem('jQuery.waypoints', 'waypoints'),
+        'Wink toolkit'               : new fwItem('wink'),
         'WebFont Loader'             : new fwItem('WebFont', 'webfont'),
         'xui'                        : new fwItem('x$', 'xuijs'),
         'yepnope.js'                 : new fwItem('yepnope', 'yepnope'),
-        'YUI 3'                      : new fwItem('YUI.version', 'yui'),
-        'YUI 2'                      : new fwItem('YAHOO.VERSION', 'yui'),
+        'YUI'                        : new fwItem(['YAHOO.VERSION', 'YUI.version'], 'yui'),
         'Zepto'                      : new fwItem('Zepto', 'zepto'),
         'ZK'                         : new fwItem('zk.version')
     };
@@ -174,7 +190,7 @@
             description = (cdnjsInfo) ? cdnjsInfo.description : '';
         
         if (curVer !== null) {
-            description += ' (Current version: ' + curVer + ')';
+            description += ' (Latest version: ' + curVer + ')';
         }
         
         fwLi = document.createElement('li');
@@ -194,7 +210,7 @@
             
             if (curVer !== null) {
                 var verSpan = document.createElement('span');
-                verSpan.style.color = (curVer != fwVersion) ? '#f33' : '#0f0';
+                verSpan.style.color = (curVer != fwVersion) ? '#f33' : '#090';
                 verSpan.appendChild(document.createTextNode(fwVersion));
                 fwLi.appendChild(verSpan);
             } else {
@@ -215,14 +231,30 @@
 
         for (var fwNs in fwList) {
             if (fwList.hasOwnProperty(fwNs)) {
-                var exists = window;
-                for (var i = 0, idents = fwList[fwNs].verPath.split('.'); i < idents.length; i++) {
-                    exists = exists && exists[idents[i]];
-                }
-                if (exists) {
-                    var version = (typeof exists === 'string') ? exists : false;
-                    showInfo(fwNs, version);
-                    howMany++;
+                // Loop through all possible version paths
+                for (var j = 0; j < fwList[fwNs].verPaths.length; j++) {
+                    var exists = window,
+                        verPath = fwList[fwNs].verPaths[j];
+
+                    for (var i = 0, idents = verPath.split('.'); i < idents.length; i++) {
+                        exists = exists && exists[idents[i]];
+                    }
+                    if (exists) {
+                        var version = false;
+                        if (typeof exists === 'string' && ! exists.match(/^<%=/)) {
+                            version = exists;
+                        } else if (typeof exists === 'object' && exists.hasOwnProperty('toString')) {
+                            version = exists.toString();
+                        }
+                        if (version !== false) {
+                            // remove build number ex. "(12345)"
+                            version = version.replace(/\s*\(.+\)\s*/, '');
+                        }
+
+                        showInfo(fwNs, version);
+                        howMany++;
+                        break;
+                    }
                 }
             }
         }
