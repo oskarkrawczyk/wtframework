@@ -17,7 +17,7 @@
         this.verPaths  = verPaths;
         this.cdnjsName = cdnjsName || '';
     }
-    
+
     var fwList = {
         'Ace'                        : new fwItem('ace', 'ace'),
         'ActiveJS'                   : new fwItem('ActiveSupport'),
@@ -55,7 +55,7 @@
         'Handlebars'                 : new fwItem('Handlebars.VERSION', 'handlebars.js'),
         'Head JS'                    : new fwItem('head.js', 'headjs'),
         'Highcharts JS'              : new fwItem('Highcharts.version', 'highcharts'),
-        'History.js'                 : new fwItem('History', 'History.js'),
+        'History.js'                 : new fwItem('History.Adapter', 'History.js'),
         'Hogan.js'                   : new fwItem('Hogan'),
         'html5shiv'                  : new fwItem('html5', 'html5shiv'),
         'ICanHaz.js'                 : new fwItem('ich.VERSION', 'ICanHaz.js'),
@@ -122,7 +122,7 @@
         'Zepto'                      : new fwItem('Zepto', 'zepto'),
         'ZK'                         : new fwItem('zk.version')
     };
-    
+
     var fwStyleLi = {
         'cursor'            : 'pointer',
         'text-align'        : 'left',
@@ -144,7 +144,7 @@
         'clear'             : 'both',
         'min-width'         : '170px'
     };
-    
+
     var fwStyleUl = {
         'position'  : 'fixed',
         'padding'   : '0',
@@ -182,17 +182,17 @@
             s;
 
         // Show additional info from cdnjs
-        var cdnjsInfo = (fwList[fwName] && pkgs[fwList[fwName].cdnjsName]) 
+        var cdnjsInfo = (fwList[fwName] && pkgs[fwList[fwName].cdnjsName])
                       ? pkgs[fwList[fwName].cdnjsName] : null;
 
         var curVer      = (cdnjsInfo) ? cdnjsInfo.version : null,
             homepageUrl = (cdnjsInfo) ? cdnjsInfo.homepage : '#',
             description = (cdnjsInfo) ? cdnjsInfo.description : '';
-        
+
         if (curVer !== null) {
             description += ' (Latest version: ' + curVer + ')';
         }
-        
+
         fwLi = document.createElement('li');
 
         fwLink = document.createElement('a');
@@ -207,7 +207,7 @@
 
         if (fwVersion && (fwVersion != '%build%')) {
             fwLi.appendChild(document.createTextNode(' ('));
-            
+
             if (curVer !== null) {
                 var verSpan = document.createElement('span');
                 verSpan.style.color = (curVer != fwVersion) ? '#f33' : '#090';
@@ -216,7 +216,7 @@
             } else {
                 fwLi.appendChild(document.createTextNode(fwVersion));
             }
-            
+
             fwLi.appendChild(document.createTextNode(')'));
         }
 
