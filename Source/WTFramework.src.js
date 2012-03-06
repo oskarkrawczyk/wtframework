@@ -125,10 +125,10 @@
 
     var fwStyleLi = {
         'cursor'            : 'pointer',
-        'textAlign'         : 'left',
+        'text-align'        : 'left',
         'padding'           : '12px 16px',
         'margin'            : '0 0 8px',
-        'listStyle'         : 'none',
+        'list-style'        : 'none',
         'font'              : 'bold 12px Helvetica, Arial, sans-serif',
         //'background'    : '-moz-linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, rgba(243, 243, 243, 0.9) 100%)', // FF3.6+
         //'background'    : '-webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(243, 243, 243, 0.8) 100%)', // Chrome10+, Safari5.1+
@@ -136,13 +136,13 @@
         //'background'    : 'linear-gradient(top, rgba(255, 255, 255, 0.9) 0%, rgba(243, 243, 243, 0.9) 100%)', // W3C
         'background'        : 'rgba(243, 243, 243, 0.9)',
         'color'             : '#666',
-        'borderRadius'      : '4px',
+        'border-radius'     : '4px',
         'border'            : 'solid 1px rgba(255, 255, 255, 0.9)',
-        'textShadow'        : '0 1px 0 #fff',
-        'boxShadow'         : '0 0 8px rgba(0, 0, 0, 0.6)',
+        'text-shadow'       : '0 1px 0 #fff',
+        'box-shadow'        : '0 0 8px rgba(0, 0, 0, 0.6)',
         'float'             : 'right',
         'clear'             : 'both',
-        'minWidth'          : '170px'
+        'min-width'         : '170px'
     };
 
     var fwStyleUl = {
@@ -151,13 +151,13 @@
         'margin'    : '0',
         'right'     : '10px',
         'top'       : '10px',
-        'zIndex'    : 16777271
+        'z-index'   : 16777271
     };
 
     var fwStyleA = {
         'color'             : '#666',
         'font'              : 'bold 12px Helvetica, Arial, sans-serif',
-        'textDecoration'    : 'none'
+        'text-decoration'   : 'none'
     };
 
     var props = {
