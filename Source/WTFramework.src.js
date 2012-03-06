@@ -18,6 +18,16 @@
         this.cdnjsName = cdnjsName || '';
     }
 
+    function fwApplyStyles(element, styles) {
+        for (var s in styles) {
+            if (typeof element.style.setProperty !== 'undefined') {
+                element.style.setProperty(s, styles[s], null);
+            } else {
+                element.style[s] = styles[s];
+            }
+        }
+    }
+
     var fwList = {
         'Ace'                        : new fwItem('ace', 'ace'),
         'ActiveJS'                   : new fwItem('ActiveSupport'),
@@ -171,9 +181,7 @@
         fwUl[prop] = props[prop];
     }
 
-    for (var s in fwStyleUl) {
-        fwUl.style.setProperty(s, fwStyleUl[s], "");
-    }
+    fwApplyStyles(fwUl, fwStyleUl);
 
     document.body.appendChild(fwUl);
 
@@ -199,10 +207,8 @@
         fwLink.href = homepageUrl;
         fwLink.title = description;
         fwLink.appendChild(document.createTextNode(fwName));
+        fwApplyStyles(fwLink, fwStyleA);
 
-        for (s in fwStyleA) {
-            fwLink.style.setProperty(s, fwStyleA[s], "");
-        }
         fwLi.appendChild(fwLink);
 
         if (fwVersion && (fwVersion != '%build%')) {
@@ -220,9 +226,7 @@
             fwLi.appendChild(document.createTextNode(')'));
         }
 
-        for (s in fwStyleLi) {
-            fwLi.style.setProperty(s, fwStyleLi[s], "");
-        }
+        fwApplyStyles(fwLi, fwStyleLi);
         fwUl.appendChild(fwLi);
     };
 
