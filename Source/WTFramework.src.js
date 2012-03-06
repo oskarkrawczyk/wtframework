@@ -172,7 +172,7 @@
     }
 
     for (var s in fwStyleUl) {
-        fwUl.style[s] = fwStyleUl[s];
+        fwUl.style.setProperty(s, fwStyleUl[s], "");
     }
 
     document.body.appendChild(fwUl);
@@ -201,7 +201,7 @@
         fwLink.appendChild(document.createTextNode(fwName));
 
         for (s in fwStyleA) {
-            fwLink.style[s] = fwStyleA[s];
+            fwLink.style.setProperty(s, fwStyleA[s], "");
         }
         fwLi.appendChild(fwLink);
 
@@ -221,7 +221,7 @@
         }
 
         for (s in fwStyleLi) {
-            fwLi.style[s] = fwStyleLi[s];
+            fwLi.style.setProperty(s, fwStyleLi[s], "");
         }
         fwUl.appendChild(fwLi);
     };
