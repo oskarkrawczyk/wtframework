@@ -1,1 +1,1 @@
-javascript:var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);z.setAttribute('src','https://raw.github.com/oskarkrawczyk/wtframework/master/Source/WTFramework.src.js');b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}void(0)
+javascript:var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);z.setAttribute('src','//raw.github.com/oskarkrawczyk/wtframework/master/Source/WTFramework.src.js');b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}void(0)
