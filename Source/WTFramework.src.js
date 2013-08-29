@@ -270,7 +270,7 @@
 
     if (!window.wtfPkgs) {
         // Load packages from cdnjs
-        // http://www.cdnjs.com/packages.json
+        // http://www.cdnjs.com/packages.min.json
         // thru Yahoo's YQL jsonp proxy
         window.wtfJsonpCb = function(json) {
             var pkgs = json.query.results.json.packages;
@@ -285,7 +285,7 @@
         };
 
         var jsonp = document.createElement('script');
-        jsonp.setAttribute('src', "//query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D'http%3A%2F%2Fwww.cdnjs.com%2Fpackages.json'&format=json&callback=wtfJsonpCb");
+        jsonp.setAttribute('src', "//query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D'http%3A%2F%2Fwww.cdnjs.com%2Fpackages.min.json'&format=json&callback=wtfJsonpCb");
         document.getElementsByTagName('head')[0].appendChild(jsonp);
     } else {
         findFrameworks();
