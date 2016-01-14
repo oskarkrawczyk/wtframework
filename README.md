@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 # WTFramework Bookmarklet
 **Check the JavaScript framework used on a website with just one click**
 
